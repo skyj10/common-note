@@ -114,3 +114,8 @@ npm ERR! ChromeDriver installation failed Error extracting archive: Error: end o
 - eslint默认校验函数和括号之间要加空格，取消此校验可以在eslintrc.js 的rule 中添加 `"space-before-function-paren": 0,`
 
 
+## compress plugins 构建95%出错
+- 因为node版本过高，要兼容旧版本openssl
+- 要在package.json加"scripts": {
+    "dev": "SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+
